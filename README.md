@@ -18,13 +18,40 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # inheritedWritablePropertySymbols
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Return an array of an object's inherited writable [symbol][@stdlib/symbol/ctor] properties.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-inherited-writable-property-symbols
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
@@ -33,7 +60,7 @@ limitations under the License.
 <!-- eslint-disable id-length -->
 
 ```javascript
-import inheritedWritablePropertySymbols from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@esm/index.mjs';
+var inheritedWritablePropertySymbols = require( '@stdlib/utils-inherited-writable-property-symbols' );
 ```
 
 #### inheritedWritablePropertySymbols( obj\[, level] )
@@ -43,9 +70,9 @@ Returns an `array` of an object's inherited writable [symbol][@stdlib/symbol/cto
 <!-- eslint-disable id-length -->
 
 ```javascript
-import defineProperty from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@esm/index.mjs';
-import hasSymbolSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@esm/index.mjs';
-import Symbol from 'https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@esm/index.mjs';
+var defineProperty = require( '@stdlib/utils-define-property' );
+var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
+var Symbol = require( '@stdlib/symbol-ctor' );
 
 var hasSymbols = hasSymbolSupport();
 var symbols;
@@ -106,16 +133,11 @@ var symbols = inheritedWritablePropertySymbols( [], 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import defineProperty from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@esm/index.mjs';
-import hasSymbolSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@esm/index.mjs';
-import Symbol from 'https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@esm/index.mjs';
-import inheritedWritablePropertySymbols from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@esm/index.mjs';
+```javascript
+var defineProperty = require( '@stdlib/utils-define-property' );
+var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
+var Symbol = require( '@stdlib/symbol-ctor' );
+var inheritedWritablePropertySymbols = require( '@stdlib/utils-inherited-writable-property-symbols' );
 
 var hasSymbols = hasSymbolSupport();
 var symbols;
@@ -162,10 +184,6 @@ obj = new Foo();
 symbols = inheritedWritablePropertySymbols( obj );
 
 console.log( symbols );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -198,7 +216,7 @@ console.log( symbols );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -228,8 +246,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/utils-inherited-writable-property-symbols.svg
 [npm-url]: https://npmjs.org/package/@stdlib/utils-inherited-writable-property-symbols
 
-[test-image]: https://github.com/stdlib-js/utils-inherited-writable-property-symbols/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/utils-inherited-writable-property-symbols/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/utils-inherited-writable-property-symbols/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/utils-inherited-writable-property-symbols/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-inherited-writable-property-symbols/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/utils-inherited-writable-property-symbols?branch=main
@@ -260,17 +278,17 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [ecma-262-for-in]: https://262.ecma-international.org/5.1/#sec-12.6.4
 
-[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor/tree/esm
+[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor
 
 <!-- <related-links> -->
 
-[@stdlib/utils/inherited-writable-property-names]: https://github.com/stdlib-js/utils-inherited-writable-property-names/tree/esm
+[@stdlib/utils/inherited-writable-property-names]: https://github.com/stdlib-js/utils-inherited-writable-property-names
 
-[@stdlib/utils/writable-property-symbols]: https://github.com/stdlib-js/utils-writable-property-symbols/tree/esm
+[@stdlib/utils/writable-property-symbols]: https://github.com/stdlib-js/utils-writable-property-symbols
 
-[@stdlib/utils/writable-property-symbols-in]: https://github.com/stdlib-js/utils-writable-property-symbols-in/tree/esm
+[@stdlib/utils/writable-property-symbols-in]: https://github.com/stdlib-js/utils-writable-property-symbols-in
 
-[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties/tree/esm
+[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties
 
 <!-- </related-links> -->
 
