@@ -44,7 +44,7 @@ limitations under the License.
 <!-- eslint-disable id-length -->
 
 ```javascript
-import inheritedWritablePropertySymbols from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@esm/index.mjs';
+import inheritedWritablePropertySymbols from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@v0.1.0-esm/index.mjs';
 ```
 
 #### inheritedWritablePropertySymbols( obj\[, level] )
@@ -126,7 +126,7 @@ var symbols = inheritedWritablePropertySymbols( [], 1 );
 import defineProperty from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@esm/index.mjs';
 import hasSymbolSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@esm/index.mjs';
 import Symbol from 'https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@esm/index.mjs';
-import inheritedWritablePropertySymbols from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@esm/index.mjs';
+import inheritedWritablePropertySymbols from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@v0.1.0-esm/index.mjs';
 
 var hasSymbols = hasSymbolSupport();
 var symbols;
