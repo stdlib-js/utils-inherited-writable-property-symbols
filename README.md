@@ -35,23 +35,7 @@ limitations under the License.
 
 > Return an array of an object's inherited writable [symbol][@stdlib/symbol/ctor] properties.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/utils-inherited-writable-property-symbols
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
@@ -59,8 +43,32 @@ The [branches.md][branches-url] file summarizes the available branches and displ
 
 <!-- eslint-disable id-length -->
 
+To use in Observable,
+
 ```javascript
-var inheritedWritablePropertySymbols = require( '@stdlib/utils-inherited-writable-property-symbols' );
+inheritedWritablePropertySymbols = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var inheritedWritablePropertySymbols = require( 'path/to/vendor/umd/utils-inherited-writable-property-symbols/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.inheritedWritablePropertySymbols;
+})();
+</script>
 ```
 
 #### inheritedWritablePropertySymbols( obj\[, level] )
@@ -133,11 +141,16 @@ var symbols = inheritedWritablePropertySymbols( [], 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var defineProperty = require( '@stdlib/utils-define-property' );
-var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
-var Symbol = require( '@stdlib/symbol-ctor' );
-var inheritedWritablePropertySymbols = require( '@stdlib/utils-inherited-writable-property-symbols' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-writable-property-symbols@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var hasSymbols = hasSymbolSupport();
 var symbols;
@@ -184,6 +197,11 @@ obj = new Foo();
 symbols = inheritedWritablePropertySymbols( obj );
 
 console.log( symbols );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -278,17 +296,17 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [ecma-262-for-in]: https://262.ecma-international.org/5.1/#sec-12.6.4
 
-[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor
+[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/utils/inherited-writable-property-names]: https://github.com/stdlib-js/utils-inherited-writable-property-names
+[@stdlib/utils/inherited-writable-property-names]: https://github.com/stdlib-js/utils-inherited-writable-property-names/tree/umd
 
-[@stdlib/utils/writable-property-symbols]: https://github.com/stdlib-js/utils-writable-property-symbols
+[@stdlib/utils/writable-property-symbols]: https://github.com/stdlib-js/utils-writable-property-symbols/tree/umd
 
-[@stdlib/utils/writable-property-symbols-in]: https://github.com/stdlib-js/utils-writable-property-symbols-in
+[@stdlib/utils/writable-property-symbols-in]: https://github.com/stdlib-js/utils-writable-property-symbols-in/tree/umd
 
-[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties
+[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties/tree/umd
 
 <!-- </related-links> -->
 
